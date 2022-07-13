@@ -27,6 +27,7 @@ def check_root_full():
 
 def check_cpu_constrained():
     """Returns True if the cpu is having too much usage, False otherwise"""
+    print("Checks if cpu_percent is more than 75")
     return psutil.cpu_percent(1) > 75
 
 
@@ -56,7 +57,7 @@ def main():
     if not everything_ok:
         sys.exit(1)
 
-    
+
     print("Everything ok.")
     sys.exit(0)
     
