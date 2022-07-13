@@ -27,7 +27,8 @@ def check_root_full():
 
 def check_cpu_constrained():
     """Returns True if the cpu is having too much usage, False otherwise"""
-    return psutil.cpu_percent(1) > 75
+    print("Checks if cpu_percent is less than 85")
+    return psutil.cpu_percent(1) > 85
 
 
 def check_no_network():
